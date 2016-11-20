@@ -1,15 +1,10 @@
 #!/bin/sh
 
-cd $HOME/dotfiles
-
-if [[ -f $PWD/.bashrc ]]; then
-    ln -is $PWD/.bashrc $HOME
+if ! grep '^\. ~/dotfiles/\.bashrc$' ~/.bashrc >/dev/null 2>&1; then
+    echo '. ~/dotfiles/.bashrc' >> ~/.bashrc
 fi
 
-if [[ -f $PWD/.tmux.conf ]]; then
-    ln -is $PWD/.tmux.conf $HOME
-fi
-
-if [[ -f $PWD/.agignore ]]; then
-    ln -is $PWD/.agignore $HOME
-fi
+for file in .tmux.conf .agignore
+do
+    ln -is ~/dotfiles/$file ~/$file
+done
