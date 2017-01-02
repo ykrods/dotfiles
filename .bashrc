@@ -11,7 +11,8 @@ export PATH=$HOME/homebrew/bin:$PATH
 
 # alias
 alias dl='docker ps -l -q'
-alias ddang='docker images -f "dangling=true" -q'
+alias docker-dangling-images='docker images -f "dangling=true" -q'
+alias docker-dangling-volumes='docker volume ls -f "dangling=true" -q'
 
 # per os
 case $(uname) in
