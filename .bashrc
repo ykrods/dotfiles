@@ -8,6 +8,8 @@ export EDITOR="emacs"
 # path
 export PATH=$HOME/dotfiles/bin:$PATH
 export PATH=$HOME/homebrew/bin:$PATH
+export PATH=$HOME/.venv/bin:$PATH
+export TEXT_DIR=~/storage/text
 
 # alias
 alias dl='docker ps -l -q'
