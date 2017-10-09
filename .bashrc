@@ -5,6 +5,9 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE="fg:bg:jobs"
 export EDITOR="emacs"
 
+## python
+export PYTHONDONTWRITEBYTECODE=1
+
 # path
 export PATH=$HOME/dotfiles/bin:$PATH
 export PATH=$HOME/homebrew/bin:$PATH
