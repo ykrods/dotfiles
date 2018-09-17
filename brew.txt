@@ -1,7 +1,7 @@
 emacs
-cask
-readline
+jq
 reattach-to-user-namespace
 the_silver_searcher
 tmux
 tree
+openssl
