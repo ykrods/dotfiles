@@ -2,7 +2,6 @@
 
 # # Prerequisites
 #
-# - virtualenv
 # - homebrew
 #
 # # [TIPS] brew on home
@@ -23,7 +22,7 @@ done
 
 brew install $(cat ~/dotfiles/brew.txt)
 
-virtualenv ~/.venv
-~/.venv/bin/pip install -r ~/dotfiles/requirements.txt
+# virtualenv ~/.venv
+# ~/.venv/bin/pip install -r ~/dotfiles/requirements.txt
 
 mkdir -p ~/{.ssh,proj}
