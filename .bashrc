@@ -16,7 +16,8 @@ export PATH=$HOME/.venv/bin:$PATH
 export TEXT_DIR=~/storage/text
 
 # alias
-alias dl='docker ps -l -q'
+alias docker-latest-container='docker ps -l -q'
+alias docker-all-containers='docker ps -q -a'
 alias docker-dangling-images='docker images -f "dangling=true" -q'
 alias docker-dangling-volumes='docker volume ls -f "dangling=true" -q'
 
