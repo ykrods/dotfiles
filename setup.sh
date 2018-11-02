@@ -26,3 +26,9 @@ brew install $(cat ~/dotfiles/brew.txt)
 # ~/.venv/bin/pip install -r ~/dotfiles/requirements.txt
 
 mkdir -p ~/{.ssh,proj}
+
+# git config --global user.name =
+# git config --global user.email =
+# git config -f ~/.gitconfig-proj user.name =
+# git config -f ~/.gitconfig-proj user.email =
+# git config --global includeIf."gitdir:~/proj".path "~/.gitconfig-proj"
