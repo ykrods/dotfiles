@@ -27,6 +27,7 @@ case $(uname) in
     # ls color
     export CLICOLOR=1
     export LSCOLORS=DxGxcxdxCxegedabagacad
+    export BASH_SILENCE_DEPRECATION_WARNING=1
     ;;
 "Linux")
     ;;
