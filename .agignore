@@ -1,4 +1,6 @@
 .git
 .hg
+*.po
 migrations
 dist
+node_modules
