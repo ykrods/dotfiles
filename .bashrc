@@ -5,14 +5,9 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE="fg:bg:jobs"
 export EDITOR="emacs"
 
-## python
-export PYTHONDONTWRITEBYTECODE=1
-
 # path
 export PATH=$HOME/dotfiles/bin:$PATH
-export PATH=$HOME/homebrew/bin:$PATH
-export PATH=$HOME/homebrew/opt/openssl/bin:$PATH
-export PATH=$HOME/.venv/bin:$PATH
+
 export TEXT_DIR=~/storage/text
 
 # alias
@@ -28,6 +23,8 @@ case $(uname) in
     export CLICOLOR=1
     export LSCOLORS=DxGxcxdxCxegedabagacad
     export BASH_SILENCE_DEPRECATION_WARNING=1
+    export PATH=$HOME/homebrew/bin:$PATH
+    export PATH=$HOME/homebrew/opt/openssl/bin:$PATH
     ;;
 "Linux")
     ;;
