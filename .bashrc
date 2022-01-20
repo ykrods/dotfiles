@@ -27,6 +27,7 @@ case $(uname) in
     export PATH=$HOME/homebrew/opt/openssl/bin:$PATH
     ;;
 "Linux")
+    xmodmap ~/dotfiles/.Xmodmap
     ;;
 * )
     ;;
