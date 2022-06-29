@@ -1,4 +1,13 @@
-manjaro gnome をインストール
+==========
+manjaro
+==========
+
+`manjaro <https://manjaro.org/>`_
+
+* 使用感が mac に近い Gnome Edition をインストール
+
+日本語入力
+=============
 
 Manjaro Hello > Extended language Support > Manjaro Asian Input Support Ibus
 
@@ -15,43 +24,64 @@ Manjaro Hello > Extended language Support > Manjaro Asian Input Support Ibus
   latin_mode < Muhenkan
   hiragana_mode < Henkan
 
-gnome tweaks (今は? Gnome Extensions という管理ツールを使う方がいい？らしいが、FLATHUB とは？)
-  キーボードとマウス > Emacs入力
-                     > アクティビティ画面のショートカット > 追加のレイアウトオプション > Caps Lock behavior > Make Caps Lock an addtional Ctrl
+キーボード
+============
 
+gnome tweaks > キーボードとマウス
 
+* Emacs入力
+* アクティビティ画面のショートカット > 追加のレイアウトオプション > Caps Lock behavior > Make Caps Lock an addtional Ctrl
+* MEMO: Gnome Extensions という管理ツールを使う方がいい？らしいが、FLATHUB ?
+
+デスクトップ
+==============
+
+::
+
+  # Desktop 等のフォルダ名を英語にする
   $ LANG=C
   $ xdg-user-dirs-gtk-update
 
-https://qiita.com/take5249/items/13ada73bbd01ee12a2c3
+* ref. https://qiita.com/take5249/items/13ada73bbd01ee12a2c3
 
-Firefox の設定
-* ブックマークツールバー
-*  openintab
+デスクトップフォルダのアイコン表示
+-------------------------------------
 
 gnome-lauout-switcher > Settings > Desktop icons
 
-sudo packman -S emacs tmux xsel the_silver_searcher snapd
 
-$ git clone git@github.com:ykrods/dotfiles.git
-$ git clone git@github.com:ykrods/dockerfiles.git
-$ git clone git@github.com:ykrods/.emacs.d
+Firefox
+===========
 
-$ cd dotfiles
-$ ln -s .tmux.conf ~/
-$ ln -s .agignore ~/
-$ ln -s
+* ブックマークツールバー
+*  openintab
 
-$ # sudo pacman -S yay # iran ??
-$ sudo pacman -S docker docker-compose
-$ sudo groupadd docker
-$ sudo usermod -aG docker $USER
-$ sudo systemctl enable docker
-$ sudo systemctl start docker
+Terminal
+==========
 
-$ sudo systemctl enable --now apparmor
-$ sudo systemctl enable --now snapd.apparmor
-$ sudo systemctl enable --now snapd.socket
-$ sudo systemctl status snapd
-$ sudo snap install multipass
-$ sudo pacman -S keybase-gui
+::
+
+  $ sudo packman -S emacs tmux xsel the_silver_searcher snapd
+
+  $ git clone git@github.com:ykrods/dotfiles.git
+  $ git clone git@github.com:ykrods/dockerfiles.git
+  $ git clone git@github.com:ykrods/.emacs.d
+
+  $ cd dotfiles
+  $ ln -s .tmux.conf ~/
+  $ ln -s .agignore ~/
+
+  $ # sudo pacman -S yay # iran ??
+
+  $ sudo pacman -S docker docker-compose
+  $ sudo groupadd docker
+  $ sudo usermod -aG docker $USER
+  $ sudo systemctl enable docker
+  $ sudo systemctl start docker
+
+  $ sudo systemctl enable --now apparmor
+  $ sudo systemctl enable --now snapd.apparmor
+  $ sudo systemctl enable --now snapd.socket
+  $ sudo systemctl status snapd
+  $ sudo snap install multipass
+  $ sudo pacman -S keybase-gui
