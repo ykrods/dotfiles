@@ -6,6 +6,7 @@ manjaro
 
 * 使用感が mac に近い Gnome Edition をインストール
 
+
 日本語入力
 =============
 
@@ -24,6 +25,7 @@ Manjaro Hello > Extended language Support > Manjaro Asian Input Support Ibus
   latin_mode < Muhenkan
   hiragana_mode < Henkan
 
+
 キーボード
 ============
 
@@ -32,6 +34,7 @@ gnome tweaks > キーボードとマウス
 * Emacs入力
 * アクティビティ画面のショートカット > 追加のレイアウトオプション > Caps Lock behavior > Make Caps Lock an addtional Ctrl
 * MEMO: Gnome Extensions という管理ツールを使う方がいい？らしいが、FLATHUB ?
+
 
 デスクトップ
 ==============
@@ -44,6 +47,7 @@ gnome tweaks > キーボードとマウス
 
 * ref. https://qiita.com/take5249/items/13ada73bbd01ee12a2c3
 
+
 デスクトップフォルダのアイコン表示
 -------------------------------------
 
@@ -54,7 +58,20 @@ Firefox
 ===========
 
 * ブックマークツールバー
-*  openintab
+* openintab
+
+
+bashrc
+==========
+
+`~/.bashrc` に以下を追加
+
+::
+
+  if [ -f ~/dotfiles/.bashrc ]; then
+    . ~/dotfiles/.bashrc
+  fi
+
 
 Terminal
 ==========
@@ -85,3 +102,19 @@ Terminal
   $ sudo systemctl status snapd
   $ sudo snap install multipass
   $ sudo pacman -S keybase-gui
+
+  $ sudo pacman -S nodejs npm
+
+
+OneDrive
+==========
+
+::
+
+  mkdir ~/OneDrive
+  ln -s ~/OneDrive ~/storage
+
+  cd dockerfiles/onedrive
+  emacs -nw .env
+  docker-compose run --rm --service-ports onedrive # Authorization
+  docker-compose up -d
