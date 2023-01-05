@@ -22,6 +22,7 @@ Manjaro Hello > Extended language Support > Manjaro Asian Input Support Ibus
 
 ::
 
+  on_off < Ctrl+j を削除
   latin_mode < Muhenkan
   hiragana_mode < Henkan
 
@@ -51,7 +52,7 @@ gnome tweaks > キーボードとマウス
 デスクトップフォルダのアイコン表示
 -------------------------------------
 
-gnome-lauout-switcher > Settings > Desktop icons
+gnome-layout-switcher > Settings > Desktop icons
 
 
 Firefox
@@ -78,7 +79,11 @@ Terminal
 
 ::
 
-  $ sudo packman -S emacs tmux xsel the_silver_searcher snapd
+  # pacman のミラー変更
+  $ sudo pacman-mirrors --country Japan --timeout 5
+  $ sudo pacman -Syyu
+
+  $ sudo pacman -S emacs tmux xsel the_silver_searcher snapd nodejs npm keybase-gui
 
   $ git clone git@github.com:ykrods/dotfiles.git
   $ git clone git@github.com:ykrods/dockerfiles.git
@@ -100,10 +105,8 @@ Terminal
   $ sudo systemctl enable --now snapd.apparmor
   $ sudo systemctl enable --now snapd.socket
   $ sudo systemctl status snapd
-  $ sudo snap install multipass
-  $ sudo pacman -S keybase-gui
 
-  $ sudo pacman -S nodejs npm
+  $ sudo snap install multipass
 
 
 OneDrive
