@@ -83,7 +83,7 @@ Terminal
   $ sudo pacman-mirrors --country Japan --timeout 5
   $ sudo pacman -Syyu
 
-  $ sudo pacman -S emacs tmux xsel the_silver_searcher snapd nodejs npm keybase-gui
+  $ sudo pacman -S emacs tmux xsel the_silver_searcher nodejs npm keybase-gui
 
   $ git clone git@github.com:ykrods/dotfiles.git
   $ git clone git@github.com:ykrods/dockerfiles.git
@@ -93,20 +93,25 @@ Terminal
   $ ln -s .tmux.conf ~/
   $ ln -s .agignore ~/
 
-  $ # sudo pacman -S yay # iran ??
-
   $ sudo pacman -S docker docker-compose
   $ sudo groupadd docker
   $ sudo usermod -aG docker $USER
   $ sudo systemctl enable docker
   $ sudo systemctl start docker
 
+  # memo: ポリシーとして AUR (yay) or snap or flatpak いずれか選んで使うのが
+  #       良さそうだがとりあえず試しで snap と flatpak を使う
+  #       ( multipass が snap しかなさそう
+  $ sudo pacman -S snapd
   $ sudo systemctl enable --now apparmor
   $ sudo systemctl enable --now snapd.apparmor
   $ sudo systemctl enable --now snapd.socket
   $ sudo systemctl status snapd
 
   $ sudo snap install multipass
+  $ pamac install flatpak
+
+  $ flatpak install flathub com.google.AndroidStudio
 
 
 OneDrive
