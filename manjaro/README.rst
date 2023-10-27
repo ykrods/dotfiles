@@ -99,9 +99,8 @@ Terminal
   $ sudo systemctl enable docker
   $ sudo systemctl start docker
 
-  # memo: ポリシーとして AUR (yay) or snap or flatpak いずれか選んで使うのが
-  #       良さそうだがとりあえず試しで snap と flatpak を使う
-  #       ( multipass が snap しかなさそう
+  # memo: multipass が snap しかなさそうなので snap を利用する
+  #       (AUR (yay) や flatpak については必要になってから検討する
   $ sudo pacman -S snapd
   $ sudo systemctl enable --now apparmor
   $ sudo systemctl enable --now snapd.apparmor
@@ -109,9 +108,6 @@ Terminal
   $ sudo systemctl status snapd
 
   $ sudo snap install multipass
-  $ pamac install flatpak
-
-  $ flatpak install flathub com.google.AndroidStudio
 
 
 OneDrive
