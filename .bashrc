@@ -25,6 +25,7 @@ case $(uname) in
     export BASH_SILENCE_DEPRECATION_WARNING=1
     export PATH=$HOME/homebrew/bin:$PATH
     export PATH=$HOME/homebrew/opt/openssl/bin:$PATH
+    export PATH=$HOME/homebrew/opt/gnupg@2.2/bin:$PATH
     ;;
 "Linux")
     ;;
