@@ -1,5 +1,6 @@
 # env
 export EDITOR=nano
+export PATH=$HOME/.npm-global/bin:$PATH
 # Enable comment
 setopt interactivecomments
 
