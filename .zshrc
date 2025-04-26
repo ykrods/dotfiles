@@ -1,12 +1,16 @@
+# env
+export EDITOR=nano
+# Enable comment
+setopt interactivecomments
 
 # history
-export HISTSIZE=1000
-export SAVEHIST=100000
-
-setopt hist_ignore_dups
+HISTSIZE=3000
+SAVEHIST=10000
+HISTRY_IGNORE="(fg|bg|jobs)"
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
 
 # env
-
 export TEXT_DIR=~/storage/text
 
 # alias
@@ -15,6 +19,12 @@ alias docker-all-containers='docker ps -q -a'
 alias docker-dangling-images='docker images -f "dangling=true" -q'
 alias docker-dangling-volumes='docker volume ls -f "dangling=true" -q'
 
+
+if [[ ${OSTYPE} == "darwin"* ]]; then
+    # ls color
+    export CLICOLOR=1
+    export LSCOLORS=DxGxcxdxCxegedabagacad
+fi
 
 if [[ -f /etc/manjaro-release ]]; then
     typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
