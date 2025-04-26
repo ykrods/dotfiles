@@ -1,7 +1,7 @@
-emacs --with-cocoa
+emacs
 jq
-the_silver_searcher
+ripgrep
 tmux
 tree
 openssl
-gnupg@2.2
+gnupg
