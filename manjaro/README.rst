@@ -25,6 +25,7 @@ Manjaro Hello > Extended language Support > Manjaro Asian Input Support Ibus
   on_off < Ctrl+j を削除
   latin_mode < Muhenkan
   hiragana_mode < Henkan
+  convert_to_char_type_forward < Muhenkan を削除
 
 
 キーボード
@@ -54,6 +55,17 @@ gnome tweaks > キーボードとマウス
 
 gnome-layout-switcher > Settings > Desktop icons
 
+Dash to Dock
+------------------------------
+
+show app を右クリック > 設定
+
+ゴミ箱表示:
+ランチャー > ゴミ箱表示 > on
+
+画面外にポインタを移動したら表示されるやつ:
+位置とサイズ > インテリジェント表示の設定 > 押し込んで表示 > off
+
 
 Firefox
 ===========
@@ -62,17 +74,22 @@ Firefox
 * openintab
 
 
-bashrc
+zshrc
 ==========
 
-`~/.bashrc` に以下を追加
+`~/.zshrc` に以下を追加
 
 ::
 
-  if [ -f ~/dotfiles/.bashrc ]; then
-    . ~/dotfiles/.bashrc
+  if [[ -e ~/dotfiles/.zshrc  ]]; then
+    source ~/dotfiles/.zshrc
   fi
 
+Gnome Terminal
+=================
+
+* gnome-console はショートカットの変更方法が不明
+* 設定 > ショートカット > 拡大,縮小 を無効化
 
 Terminal
 ==========
@@ -82,8 +99,7 @@ Terminal
   # pacman のミラー変更
   $ sudo pacman-mirrors --country Japan --timeout 5
   $ sudo pacman -Syyu
-
-  $ sudo pacman -S emacs tmux xsel the_silver_searcher nodejs npm keybase-gui
+  $ sudo pacman -S emacs tmux xsel gnome-terminal ripgrep nodejs npm jq chromium
 
   $ git clone git@github.com:ykrods/dotfiles.git
   $ git clone git@github.com:ykrods/dockerfiles.git
@@ -93,11 +109,7 @@ Terminal
   $ ln -s .tmux.conf ~/
   $ ln -s .agignore ~/
 
-  $ sudo pacman -S docker docker-compose
-  $ sudo groupadd docker
-  $ sudo usermod -aG docker $USER
-  $ sudo systemctl enable docker
-  $ sudo systemctl start docker
+  $ sudo pacman -S podman podman-compose podman-docker
 
   # memo: multipass が snap しかなさそうなので snap を利用する
   #       (AUR (yay) や flatpak については必要になってから検討する
