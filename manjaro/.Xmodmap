@@ -1,7 +1,0 @@
-! linux remap for MacOS keyboard layout
-
-! 130: Hangl
-keycode 130 = Henkan
-
-! 131: Hangul_Hanja
-keycode 131 = Muhenkan

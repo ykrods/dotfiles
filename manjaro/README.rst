@@ -23,8 +23,8 @@ Manjaro Hello > Extended language Support > Manjaro Asian Input Support Ibus
 ::
 
   on_off < Ctrl+j を削除
-  latin_mode < Muhenkan
-  hiragana_mode < Henkan
+  latin_mode < Muhenkan, Hangle_Hanja (mac keyboard)
+  hiragana_mode < Henkan, Hangle (mac keyboard)
   convert_to_char_type_forward < Muhenkan を削除
 
 
