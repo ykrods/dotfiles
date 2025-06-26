@@ -99,7 +99,10 @@ Terminal
   # pacman のミラー変更
   $ sudo pacman-mirrors --country Japan --timeout 5
   $ sudo pacman -Syyu
-  $ sudo pacman -S emacs tmux xsel gnome-terminal ripgrep nodejs npm jq chromium
+  $ sudo pacman -S emacs tmux xsel gnome-terminal
+  $ sudo pacman -S ripgrep nodejs npm jq evtest
+  $ sudo pacman -S chromium discord code
+  $ sudo pacman -S podman podman-compose podman-docker
 
   $ git clone git@github.com:ykrods/dotfiles.git
   $ git clone git@github.com:ykrods/dockerfiles.git
@@ -108,8 +111,6 @@ Terminal
   $ cd dotfiles
   $ ln -s .tmux.conf ~/
   $ ln -s .agignore ~/
-
-  $ sudo pacman -S podman podman-compose podman-docker
 
   # memo: multipass が snap しかなさそうなので snap を利用する
   #       (AUR (yay) や flatpak については必要になってから検討する
@@ -125,12 +126,9 @@ Terminal
 OneDrive
 ==========
 
-::
+https://zenn.dev/ykrods/articles/b8a19698c2932e
 
-  mkdir ~/OneDrive
-  ln -s ~/OneDrive ~/storage
+TIPS
+==========
 
-  cd dockerfiles/onedrive
-  emacs -nw .env
-  docker-compose run --rm --service-ports onedrive # Authorization
-  docker-compose up -d
+* File Explorer で Ctrl+h > 隠しファイルを表示
