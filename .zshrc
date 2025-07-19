@@ -20,6 +20,9 @@ alias docker-all-containers='docker ps -q -a'
 alias docker-dangling-images='docker images -f "dangling=true" -q'
 alias docker-dangling-volumes='docker volume ls -f "dangling=true" -q'
 
+# keybinding
+bindkey '^H' backward-delete-char
+
 
 if [[ ${OSTYPE} == "darwin"* ]]; then
     # ls color
