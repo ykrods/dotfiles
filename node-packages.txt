@@ -1,0 +1,5 @@
+bun
+svelte-language-server
+svelte
+typescript-language-server
+typescript
