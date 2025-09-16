@@ -4,6 +4,9 @@ export PATH=$HOME/.npm-global/bin:$PATH
 # Enable comment
 setopt interactivecomments
 
+# Disable extended glob (^)
+unsetopt extendedglob
+
 # history
 HISTSIZE=3000
 SAVEHIST=10000
