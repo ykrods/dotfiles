@@ -1,0 +1,18 @@
+[Unit]
+Description=OneDrive Client for Linux service
+
+[Container]
+Image=docker.io/driveone/onedrive:edge
+User=1000:1000
+UserNS=keep-id
+Volume=onedrive-conf.volume:/onedrive/conf:Z,U
+Volume=/home/ykrods/OneDrive:/onedrive/data:Z,U
+
+[Quadlet]
+DefaultDependencies=false
+
+[Service]
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
